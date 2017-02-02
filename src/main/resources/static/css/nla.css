@@ -1,0 +1,21 @@
+
+
+.media-object.sized {
+  width: 64px;
+  height: 64px;
+}
+
+.page-header {
+  color: #aaa;
+}
+
+/* not really liking these - */
+a[href^="tel:"]:before {
+  content: "\260e";
+  margin-right: 0.5em;
+}
+
+a[href^="mailto:"]:before {
+  content: "\2709";
+  margin-right: 0.5em;
+}
