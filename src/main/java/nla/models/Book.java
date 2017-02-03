@@ -16,43 +16,43 @@ import java.util.HashSet;
 @Entity
 public class Book {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private long id;
 
-	private String title;
-	private String isbn;
-	private String author;
+  private String title;
+  private String isbn;
+  private String author;
 
   @OneToMany(mappedBy = "book")
-	private Set<BookLoan> bookLoans = new HashSet<BookLoan>();
+  private Set<BookLoan> bookLoans = new HashSet<BookLoan>();
 
-	public long getId() {
-		return id;
-	}
+  public long getId() {
+    return id;
+  }
 
-	public String getTitle() {
-		return title;
-	}
+  public String getTitle() {
+    return title;
+  }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+  public void setTitle(String title) {
+    this.title = title;
+  }
 
-	public String getAuthor() {
-		return author;
-	}
+  public String getAuthor() {
+    return author;
+  }
 
-	public void setAuthor(String author) {
-		this.author = author;
-	}
+  public void setAuthor(String author) {
+    this.author = author;
+  }
 
-	public String getIsbn() {
-		return isbn;
-	}
+  public String getIsbn() {
+    return isbn;
+  }
 
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
+  public void setIsbn(String isbn) {
+    this.isbn = isbn;
+  }
 
 }

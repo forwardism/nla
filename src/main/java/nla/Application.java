@@ -9,14 +9,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 public class Application extends SpringBootServletInitializer {
 
   /**
-	 * Required if deployed as war file, remove if standalone.
-	 */
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-			return application.sources(Application.class);
-	}
+   * Required if deployed as war file, remove if standalone.
+   */
+  @Override
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+      return application.sources(Application.class);
+  }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
 }

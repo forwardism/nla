@@ -19,60 +19,60 @@ import javax.persistence.OneToOne;
 @Entity
 public class BookLoan {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private int id;
 
   @OneToOne
-	@JoinColumn(name = "book_id")
-	private Book book;
+  @JoinColumn(name = "book_id")
+  private Book book;
 
   @ManyToOne
-	@JoinColumn(name = "person_id")
-	private Person person;
+  @JoinColumn(name = "person_id")
+  private Person person;
 
-	private Date issueDate;
-	private Date dueDate;
-	private Date returnedDate;
+  private Date issueDate;
+  private Date dueDate;
+  private Date returnedDate;
 
-	public Date getIssueDate() {
-		return issueDate;
-	}
+  public Date getIssueDate() {
+    return issueDate;
+  }
 
-	public void setIssueDate(Date issueDate) {
-		this.issueDate = issueDate;
-	}
+  public void setIssueDate(Date issueDate) {
+    this.issueDate = issueDate;
+  }
 
-	public Date getDueDate() {
-		return dueDate;
-	}
+  public Date getDueDate() {
+    return dueDate;
+  }
 
-	public void setDueDate(Date dueDate) {
-		this.dueDate = dueDate;
-	}
+  public void setDueDate(Date dueDate) {
+    this.dueDate = dueDate;
+  }
 
-	public Date getReturnedDate() {
-		return returnedDate;
-	}
+  public Date getReturnedDate() {
+    return returnedDate;
+  }
 
-	public void setReturnedDate(Date returnedDate) {
-		this.returnedDate = returnedDate;
-	}
+  public void setReturnedDate(Date returnedDate) {
+    this.returnedDate = returnedDate;
+  }
 
   public Book getBook() {
-		return book;
-	}
+    return book;
+  }
 
-	public void setBook(Book book) {
-		this.book = book;
-	}
+  public void setBook(Book book) {
+    this.book = book;
+  }
 
-	public Person getPerson() {
-		return person;
-	}
+  public Person getPerson() {
+    return person;
+  }
 
-	public void setPerson(Person person) {
-		this.person = person;
-	}
+  public void setPerson(Person person) {
+    this.person = person;
+  }
 
 }
